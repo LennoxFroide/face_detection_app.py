@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haar Casscades notes</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+<blockquote>
+<p>It is called a cascade as it’s a chain of machine learning code through which an image is passed.</p>
+</blockquote>
+<blockquote>
+<p>Each square of each image is passed through the machine learning code and it cascades through each section of code. If it passes all cascades and gets to the bottom, the algorithm knows that it looks close enough to being a face thus it is identified as one.</p>
+</blockquote>
+<blockquote>
+<p>It uses 5 rudimentary Haar features which include Edge features, Line features and Four-rectangle features which are basically black and white rectangles that are layed over the image and then the algorithm compares whether there’s any relationship between the black and whie portions.</p>
+</blockquote>
+<blockquote>
+<p>Multiple features are used together and layered over one another until a face is formed, if there’s a relationship.</p>
+</blockquote>
+<p>HOW DID OPENCV TRAIN THEIR ALGORITHM</p>
+<ul>
+<li>
+<p>In the training data, faces are postive images and are labelled as face and pictures of other things e.g a flower bud are known as negative images and are labelled as non face.</p>
+</li>
+<li>
+<p>It is a form of supervised leaarning as the raw data is labelled as face and non face then the machine is taught to distinguish the two</p>
+</li>
+<li>
+<p>Un-supervised learning would involve no labells.</p>
+</li>
+<li>
+<p>Every Haar feature is checked for every location on the image each location is given a number. The number is obtained by first adding up all the pixels in the black portion and giving them one number then adding up all the pixels in the white portion and given them one number.</p>
+</li>
+<li>
+<p>The difference between the white and the black number is then calculated depending on a pre-determined set range the number is evealuated whether or not it is good for a face.</p>
+</li>
+<li>
+<p>This process is repeated severally and we aim to get 1000 winner Haar features.</p>
+</li>
+<li>
+<p>Thus if an image gets to 1000 winner Haar features the algorithm will identify it as a face if not then it is identified as a non face.</p>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
